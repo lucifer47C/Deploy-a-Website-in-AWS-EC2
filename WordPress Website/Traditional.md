@@ -81,7 +81,7 @@
    <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/8.jpg>
    <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/9.jpg>
 
-# Task 3
+# Task 4
  Now we are going to install WordPress.
  - Download wordpress
    ```
@@ -99,4 +99,16 @@
     sudo mv wordpress/ /var/www/html
     ```
     <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/12.jpg>
-  -  
+    
+  - If we go to var/www/html we will find wordpress in that path. So if we go back to the browser now and go to the IP address followed by "/wordpress" because that is 
+    where we have stored our wordpress files, that should take us to the wordpress installation screen.
+
+    <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/13.jpg>
+
+  - Next, we have to configure the database i.e. fill in all details about the database which we created earlier. Host will be "localhost" itself.
+    <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/14.jpg>
+    
+    * You may encounter an error saying it is unable to write to the "wpconfig.php" file. You have to simply create a wpconfig.php" file and paste the code given to you 
+      that could not be written.
+      <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/15.1.jpg>
+      <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/15.2.jpg>
