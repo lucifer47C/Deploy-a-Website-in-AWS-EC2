@@ -34,9 +34,12 @@
    sudo apt install apache2
     ```
    Yes, to confirm.
-   <br>
+   <br><br>
    To verify if our Apache website is working, copy our instance public IP address and paste it into another tab in the web browser. We can see Apache's default web page, 
    it means our web server is working.
+   <br><br>
+   It is good practice to run *<span style='color: red;'>sudo apt-get update</span>* before installing any packages.
+   
 
    <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/6.jpg>
 
@@ -63,8 +66,37 @@
        ```
        ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'Testpassword@123';
        ```
-   * Install MySQL server
+   * Create a new database user for wordpress
        ```
-       sudo apt install mysql-server
+       CREATE USER 'wp_user'@localhost IDENTIFIED BY 'Testpassword@123';
        ```              
-     
+   * Create a database for wordpress
+       ```
+       CREATE DATABASE wp;
+       ```      
+   * Grant all privilges on the database 'wp' to the newly created user
+       ```
+       GRANT ALL PRIVILEGES ON wp.* TO 'wp_user'@localhost;
+       ```
+  <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/8.jpg>
+  <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/9.jpg>
+
+# Task 3
+ Now we are going to install WordPress.
+ - Download wordpress
+   ```
+   cd /tmp
+   wget https://wordpress.org/latest.tar.gz
+   ```
+ - Unzip
+   ```
+   tar -xvf latest.tar.gz
+   ```
+   <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/11.jpg>
+   
+  - Move wordpress folder to the Apache document root
+   ```
+   sudo mv wordpress/ /var/www/html
+   ```
+   <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/12.jpg>
+  -  
