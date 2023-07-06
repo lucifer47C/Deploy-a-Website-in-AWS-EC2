@@ -106,9 +106,23 @@
     <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/13.jpg>
 
   - Next, we have to configure the database i.e. fill in all details about the database which we created earlier. Host will be "localhost" itself.
+  - 
     <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/14.jpg>
+
+    And finish the rest of the installation.
     
     * You may encounter an error saying it is unable to write to the "wpconfig.php" file. You have to simply create a wpconfig.php" file and paste the code given to you 
       that could not be written.
+      
       <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/15.1.jpg>
       <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/15.2.jpg>
+
+  - You can login to wordpress dashboard by simply typing the username and password.
+      <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/16.jpg>
+      <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/17.jpg>
+      <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/18.jpg>
+
+  - Modify Apache
+    
+      <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/19.1.jpg>
+      <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/19.2.jpg>    
