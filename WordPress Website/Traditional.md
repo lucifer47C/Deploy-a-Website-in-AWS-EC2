@@ -108,7 +108,7 @@
     <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/13.jpg>
 
   - Next, we have to configure the database i.e. fill in all details about the database which we created earlier. Host will be "localhost" itself.
-  - 
+   
     <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/14.jpg>
 
     And finish the rest of the installation.
@@ -120,6 +120,7 @@
       <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/15.2.jpg>
 
   - You can login to wordpress dashboard by simply typing the username and password.
+    
       <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/16.jpg>
       <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/17.jpg>
       <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/18.jpg>
@@ -129,10 +130,19 @@
     cd /etc/apache2/sites-available/
     ls
     ```
+    Edit the "000-default.conf" file. Change DocumentRoot to "/var/www/html/wordpress".
     ```
     sudo nano 000-default.conf
-    ```    
-      <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/19.1.jpg>
-      Edit the "000-default.conf" file. Change DocumentRoot to "/var/www/html/wordpress".
+    ``` 
+    ```
+    sudo systemctl restart apache2
+    ```
       
+      <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/19.1.jpg>
       <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/19.2.jpg>    
+
+# Task 5
+ AWS's free tier is perfect when we want to learn about the service or even use it for the short term but for long-term use, it can exceed the free limit and incur
+ some costs.<br>
+ In this final task, we'll see How can we clean up the environment.
+ - Select the instance we created for this project. On top click on 'Instances State' and then click on 'Terminate'.
