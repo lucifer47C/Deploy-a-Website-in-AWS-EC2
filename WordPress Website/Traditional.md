@@ -78,8 +78,8 @@
        ```
        GRANT ALL PRIVILEGES ON wp.* TO 'wp_user'@localhost;
        ```
-  <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/8.jpg>
-  <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/9.jpg>
+   <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/8.jpg>
+   <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/9.jpg>
 
 # Task 3
  Now we are going to install WordPress.
@@ -95,8 +95,8 @@
    <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/11.jpg>
    
   - Move wordpress folder to the Apache document root
-   ```
-   sudo mv wordpress/ /var/www/html
-   ```
-   <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/12.jpg>
+    ```
+    sudo mv wordpress/ /var/www/html
+    ```
+    <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/12.jpg>
   -  
