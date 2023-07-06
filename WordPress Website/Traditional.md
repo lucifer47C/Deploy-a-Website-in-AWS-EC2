@@ -40,7 +40,12 @@
 
    <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/6.jpg>
 
-
+ - Install PHP runtime and php mysql connector
+   ```
+   sudo apt install php libapache2-mod-php php-mysql
+   ```  
+   <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/7.jpg>
+   
 # Task 3
  Now you are going to connect to the EC2 instance and install the MySQL database, which is the database we will use in our WordPress website installation.
  - Install MySQL server
