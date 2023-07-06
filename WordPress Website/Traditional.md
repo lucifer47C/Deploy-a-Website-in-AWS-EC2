@@ -1,6 +1,7 @@
 # Task 1
  Our first task is to create our AWS EC2 virtual machine that will host our WordPress and all software needed to deploy it. 
- - In the AWS console, let's access the EC2 service by navigating to **Service -> Compute -> EC2**. On the EC2 main page on top, we need to choose the region where we want to deploy our virtual machines.<br>The best practice is to choose a region close to your users.
+ - In the AWS console, let's access the EC2 service by navigating to **Service -> Compute -> EC2**. On the EC2 main page on top, we need to choose the region where we want 
+   to deploy our virtual machines.<br>The best practice is to choose a region close to your users.
  - Click on  **"Launch instance"** to launch a new instance.
 
    <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/2.jpg>
@@ -8,7 +9,8 @@
  - We need to follow some steps to create our instance.
    * Instance machine image with the OS version will want for our project. I will choose **Ubuntu**.
    * We need to choose the instance configuration like CPU and memory.
-   * We need to define the security group AWS already sets the SSH port to be used for all sources IP defined by 0.0.0.0/0. We will create a new rule to use the HTTP and HTTPS ports from any source to make our WordPress website available and accessible by HTTP/HTTPS URLs in a Web browser.
+   * We need to define the security group AWS already sets the SSH port to be used for all sources IP defined by 0.0.0.0/0. We will create a new rule to use HTTP and 
+     HTTPS ports from any source to make our WordPress website available and accessible by HTTP/HTTPS URLs in a Web browser.
    * Create the key pair. Key Pair is a secure key we will need to access our instance later.
    * We need to define storage for our instance.
    * We can define some tags.
@@ -22,7 +24,7 @@
    <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/4.jpg>
 
 # Task 2
- Now you are going to connect to the EC2 instance.
+ Now you are going to connect to the EC2 instance and install Apache and PHP on it.
  - Once we have a Linux instance, we will connect to our instance using an SSH client, or using the Web browser SSH client.<br> 
    (Select our instance and click on "Connect". In EC2 Instance Connect, click Connect again at the bottom.)
    
@@ -122,7 +124,15 @@
       <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/17.jpg>
       <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/18.jpg>
 
-  - Modify Apache
-    
+  - Modify Apache configuration to make our site be served at the IP address rather than IP/wordpress
+    ```
+    cd /etc/apache2/sites-available/
+    ls
+    ```
+    ```
+    sudo nano 000-default.conf
+    ```    
       <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/19.1.jpg>
+      Edit the "000-default.conf" file. Change DocumentRoot to "/var/www/html/wordpress".
+      
       <img src=https://github.com/lucifer47C/Deploy-a-Website-in-AWS-EC2/blob/main/WordPress%20Website/Images/19.2.jpg>    
